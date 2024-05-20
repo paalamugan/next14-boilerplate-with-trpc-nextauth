@@ -5,7 +5,7 @@ test.describe('Navigation', () => {
     test('should take screenshot of the homepage', async ({ page }) => {
       await page.goto('/');
 
-      await expect(page.getByText('Welcome to data Home page')).toBeVisible();
+      await expect(page.getByText('Welcome to our Home page')).toBeVisible();
     });
 
     test('should take screenshot of the about page', async ({ page }) => {
