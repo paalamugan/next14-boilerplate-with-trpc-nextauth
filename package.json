@@ -33,7 +33,7 @@
     "test": "npm run test:unit",
     "test:e2e": "playwright test",
     "test:e2e:ui": "npm run test:e2e -- --ui",
-    "test:e2e:ci": "start-server-and-test start http://127.0.0.1:3000 test:e2e",
+    "test:e2e:ci": "start-server-and-test start test:e2e",
     "storybook:open": "storybook dev -p 6006",
     "storybook": "npm run storybook:open -- --quiet --no-open",
     "storybook:build": "storybook build --quiet --webpack-stats-json",
