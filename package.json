@@ -31,8 +31,9 @@
     "test:unit": "jest",
     "test:watch": "npm run test -- --watch",
     "test": "npm run test:unit",
-    "commit": "cz",
     "test:e2e": "playwright test",
+    "test:e2e:ui": "npm run test:e2e -- --ui",
+    "test:e2e:ci": "start-server-and-test start http://127.0.0.1:3000 test:e2e",
     "storybook:open": "storybook dev -p 6006",
     "storybook": "npm run storybook:open -- --quiet --no-open",
     "storybook:build": "storybook build --quiet --webpack-stats-json",
@@ -40,7 +41,8 @@
     "serve-storybook": "run-s storybook:build storybook:serve",
     "test-storybook:ci": "start-server-and-test serve-storybook http://127.0.0.1:6006 test-storybook",
     "prepare": "husky",
-    "postinstall": "next telemetry disable"
+    "postinstall": "next telemetry disable",
+    "commit": "cz"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.3",

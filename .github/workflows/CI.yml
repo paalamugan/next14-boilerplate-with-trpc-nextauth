@@ -171,6 +171,9 @@ jobs:
       - name: Run storybook tests
         run: pnpm test-storybook:ci
 
+      - name: Run E2E tests
+        run: pnpm test:e2e:ci
+        
       - uses: actions/upload-artifact@v3
         if: always()
         with:
