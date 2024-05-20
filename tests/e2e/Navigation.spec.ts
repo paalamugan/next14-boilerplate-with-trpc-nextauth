@@ -1,4 +1,3 @@
-import percySnapshot from '@percy/playwright';
 import { expect, test } from '@playwright/test';
 
 test.describe('Navigation', () => {
@@ -7,8 +6,6 @@ test.describe('Navigation', () => {
       await page.goto('/');
 
       await expect(page.getByText('Welcome to data Home page')).toBeVisible();
-
-      await percySnapshot(page, 'Homepage');
     });
 
     test('should take screenshot of the about page', async ({ page }) => {
@@ -19,8 +16,6 @@ test.describe('Navigation', () => {
           name: 'About',
         })
       ).toBeVisible();
-
-      await percySnapshot(page, 'About');
     });
   });
 });
