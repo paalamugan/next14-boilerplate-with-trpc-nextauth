@@ -8,9 +8,8 @@ export const env = createEnv({
    * isn't built with invalid env vars.
    */
   server: {
-    NODE_ENV: z.enum(['development', 'test', 'production']),
-    NEXTAUTH_SECRET: process.env.NODE_ENV === 'production' ? z.string() : z.string().optional(),
     NEXTAUTH_URL: z.string().url(),
+    NEXTAUTH_SECRET: process.env.NODE_ENV === 'production' ? z.string() : z.string().optional(),
     ANALYZE: z
       .enum(['true', 'false'])
       .optional()
@@ -25,10 +24,9 @@ export const env = createEnv({
    */
   runtimeEnv: {
     ANALYZE: process.env.ANALYZE,
-    NODE_ENV: process.env.NODE_ENV,
 
-    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
 
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
   },
