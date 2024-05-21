@@ -1,5 +1,4 @@
-import Link from 'next/link';
-
+import ActiveLink from '@/components/Common/ActiveLink';
 import { LogOutButton } from '@/components/LogOutButton';
 import { BaseTemplate } from '@/templates/BaseTemplate';
 
@@ -9,22 +8,31 @@ const DashboardLayout = (props: { children: React.ReactNode }) => {
       leftNav={
         <>
           <li>
-            <Link href="/" className="border-none text-gray-700 hover:text-gray-900">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/dashboard" className="border-none text-gray-700 hover:text-gray-900">
-              Dashboard
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/dashboard/user-profile/"
+            <ActiveLink
+              href="/"
+              activeClassName="text-blue-400 border-b-2 border-blue-400 hover:text-blue-400"
               className="border-none text-gray-700 hover:text-gray-900"
             >
+              Home
+            </ActiveLink>
+          </li>
+          <li>
+            <ActiveLink
+              href="/dashboard"
+              activeClassName="text-blue-400 border-b-2 border-blue-400 hover:text-blue-400"
+              className="text-gray-700 hover:text-gray-900"
+            >
+              Dashboard
+            </ActiveLink>
+          </li>
+          <li>
+            <ActiveLink
+              href="/dashboard/user-profile"
+              activeClassName="text-blue-400 border-b-2 border-blue-400 hover:text-blue-400"
+              className="text-gray-700 hover:text-gray-900"
+            >
               Profile
-            </Link>
+            </ActiveLink>
           </li>
         </>
       }
