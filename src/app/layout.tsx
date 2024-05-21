@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 const RootLayout: FC<PropsWithChildren> = async ({ children }) => {
   return (
     <html lang="en" className={fontClasses} suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <TRPCReactProvider>
           <ThemeProvider>
             <NextTopLoader height={5} />
