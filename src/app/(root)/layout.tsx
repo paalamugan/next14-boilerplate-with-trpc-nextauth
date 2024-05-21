@@ -28,6 +28,7 @@ const Layout = (props: { children: React.ReactNode }) => {
           <li>
             <ActiveLink
               href="/portfolio"
+              allowSubPath
               activeClassName="text-blue-400 border-b-2 border-blue-400 hover:text-blue-400"
               className="text-gray-700 hover:text-gray-900"
             >
