@@ -1,5 +1,4 @@
-import Link from 'next/link';
-
+import ActiveLink from '@/components/Common/ActiveLink';
 import { BaseTemplate } from '@/templates/BaseTemplate';
 
 const Layout = (props: { children: React.ReactNode }) => {
@@ -8,34 +7,54 @@ const Layout = (props: { children: React.ReactNode }) => {
       leftNav={
         <>
           <li>
-            <Link href="/" className="border-none text-gray-700 hover:text-gray-900">
+            <ActiveLink
+              href="/"
+              activeClassName="text-blue-400 border-b-2 border-blue-400 hover:text-blue-400"
+              className="text-gray-700 hover:text-gray-900"
+            >
               Home
-            </Link>
+            </ActiveLink>
           </li>
 
           <li>
-            <Link href="/about/" className="border-none text-gray-700 hover:text-gray-900">
+            <ActiveLink
+              href="/about"
+              activeClassName="text-blue-400 border-b-2 border-blue-400 hover:text-blue-400"
+              className="text-gray-700 hover:text-gray-900"
+            >
               About
-            </Link>
+            </ActiveLink>
           </li>
           <li>
-            <Link href="/portfolio/" className="border-none text-gray-700 hover:text-gray-900">
+            <ActiveLink
+              href="/portfolio"
+              activeClassName="text-blue-400 border-b-2 border-blue-400 hover:text-blue-400"
+              className="text-gray-700 hover:text-gray-900"
+            >
               Portfolio
-            </Link>
+            </ActiveLink>
           </li>
           <li>
-            <Link href="/dashboard/" className="border-none text-gray-700 hover:text-gray-900">
+            <ActiveLink
+              href="/dashboard"
+              activeClassName="text-blue-400 border-b-2 border-blue-400 hover:text-blue-400"
+              className="text-gray-700 hover:text-gray-900"
+            >
               Protected(Auth)
-            </Link>
+            </ActiveLink>
           </li>
         </>
       }
       rightNav={
         <div>
           <li>
-            <Link href="/signin/" className="border-none text-gray-700 hover:text-gray-900">
+            <ActiveLink
+              href="/signin"
+              activeClassName="text-blue-400 border-b-2 border-blue-400 hover:text-blue-400"
+              className="text-gray-700 hover:text-gray-900"
+            >
               SignIn
-            </Link>
+            </ActiveLink>
           </li>
         </div>
       }
